@@ -104,8 +104,8 @@ public class CalendarTester {
         System.out.println("My birthday is: " + Month3 + "/" + Date3 + " and this year was on the day of the week of " + Day + ".");
 
         //This will not always be correct because the calendar is changing but my birthday is in the same place.
-        //This is correct as of 9/24/2020.
-        //The next print statement will also only be correct on 9/24/2020 for the same reason.
+        //This is correct as of 9/25/2020.
+        //The next print statement will also only be correct on 9/25/2020 for the same reason.
 
         myCal.add(Calendar.DAY_OF_YEAR, 10000);
 
