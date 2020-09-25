@@ -140,7 +140,7 @@ public class CalendarTester {
                 Day = "Saturday";
             }
 
-        System.out.println("My birthday is: " + Month3 + "/" + Date3 + " and this year was on the day of the week of " + Day + ".");
+        System.out.println("My birthday is: " + Month3 + "/" + Date3 + " and this year was on the day of the week of " + Day + " in the year 2020.");
 
         myCal.add(Calendar.DAY_OF_YEAR, 10000);
 
@@ -170,7 +170,7 @@ public class CalendarTester {
             Day = "Saturday";
         }
 
-        System.out.println("10,000 days from my last birthday the date will be: " + Month4 + "/" + Date4 + "/" + Year4 + " and the day of the week will be: " + Day + ".");
+        System.out.println("10,000 days from my 2020 birthday the date will be: " + Month4 + "/" + Date4 + "/" + Year4 + " and the day of the week will be: " + Day + ".");
 
 
     }
