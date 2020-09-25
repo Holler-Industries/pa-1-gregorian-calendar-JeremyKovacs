@@ -38,8 +38,30 @@ public class CalendarTester {
         int Date = myCal.get(Calendar.DAY_OF_MONTH);
         int Year = myCal.get(Calendar.YEAR);
         String Day = "Day";
+        int Day1 = myCal.get(Calendar.DAY_OF_WEEK);
+        if (Day1 == 1) {
+            Day = "Sunday";
+        }
+        if (Day1 == 2) {
+            Day = "Monday";
+        }
+        if (Day1 == 3) {
+            Day = "Tuesday";
+        }
+        if (Day1 == 4) {
+            Day = "Wednesday";
+        }
+        if (Day1 == 5) {
+            Day = "Thursday";
+        }
+        if (Day1 == 6) {
+            Day = "Friday";
+        }
+        if (Day1 == 7) {
+            Day = "Saturday";
+        }
 
-        System.out.println("Today's date is: " + Month + "/" + Date + "/" + Year + ".");
+        System.out.println("Today's date is: " + Month + "/" + Date + "/" + Year + " and the day of the week is: " + Day + ".");
 
 
         myCal.add(Calendar.DAY_OF_YEAR,100);
@@ -73,7 +95,24 @@ public class CalendarTester {
 
         System.out.println("100 days from today the date will be: " + Month2 + "/" + Date2 + "/" + Year2 + " and the day of the week will be: " + Day + ".");
 
-        myCal.add(Calendar.DAY_OF_YEAR,-238);
+        while (myCal.get(Calendar.YEAR) < 2020){
+            myCal.add(Calendar.DAY_OF_YEAR, 1);
+        }
+        while (myCal.get(Calendar.YEAR) > 2020){
+            myCal.add(Calendar.DAY_OF_YEAR, -1);
+        }
+        while (myCal.get(Calendar.MONTH) > 4){
+            myCal.add(Calendar.DAY_OF_YEAR, -1);
+        }
+        while (myCal.get(Calendar.MONTH) < 4){
+            myCal.add(Calendar.DAY_OF_YEAR, 1);
+        }
+        while (myCal.get(Calendar.DAY_OF_MONTH) > 10){
+            myCal.add(Calendar.DAY_OF_YEAR, -1);
+        }
+        while (myCal.get(Calendar.DAY_OF_MONTH) < 10){
+            myCal.add(Calendar.DAY_OF_YEAR, 1);
+        }
 
         int Month3 = myCal.get(Calendar.MONTH) + 1;
         int Date3 = myCal.get(Calendar.DAY_OF_MONTH);
@@ -103,17 +142,35 @@ public class CalendarTester {
 
         System.out.println("My birthday is: " + Month3 + "/" + Date3 + " and this year was on the day of the week of " + Day + ".");
 
-        //This will not always be correct because the calendar is changing but my birthday is in the same place.
-        //This is correct as of 9/25/2020.
-        //The next print statement will also only be correct on 9/25/2020 for the same reason.
-
         myCal.add(Calendar.DAY_OF_YEAR, 10000);
 
         int Month4 = myCal.get(Calendar.MONTH) + 1;
         int Date4 = myCal.get(Calendar.DAY_OF_MONTH);
         int Year4 = myCal.get(Calendar.YEAR);
+        int Day4 = myCal.get(Calendar.DAY_OF_WEEK);
+        if (Day4 == 1) {
+            Day = "Sunday";
+        }
+        if (Day4 == 2) {
+            Day = "Monday";
+        }
+        if (Day4 == 3) {
+            Day = "Tuesday";
+        }
+        if (Day4 == 4) {
+            Day = "Wednesday";
+        }
+        if (Day4 == 5) {
+            Day = "Thursday";
+        }
+        if (Day4 == 6) {
+            Day = "Friday";
+        }
+        if (Day4 == 7) {
+            Day = "Saturday";
+        }
 
-        System.out.println("10,000 days from my last birthday the date will be: " + Month4 + "/" + Date4 + "/" + Year4 + ".");
+        System.out.println("10,000 days from my last birthday the date will be: " + Month4 + "/" + Date4 + "/" + Year4 + " and the day of the week will be: " + Day + ".");
 
 
     }
